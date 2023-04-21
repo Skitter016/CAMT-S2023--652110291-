@@ -1,20 +1,162 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Box Model Example</title>
+<html lang="en">
+<head>
+
+    <title>Display-position-note</title>
     <style>
-      .box {
-        width: 200px;
-        height: 200px;
-        padding: 20px;
-        border: 5px solid black;
-        margin: 20px;
-      }
+        .box {
+            background-color: #0F5298;
+            border: 1px dashed gray;
+        }
+        .playbox{
+            background-color: lightcyan;
+            border: 1px dashed gray;
+            padding: 10px;
+        }
+
     </style>
-  </head>
-  <body>
-    <div class="box">
-      This is a box!
+</head>
+<body>
+    <h1>Box Model</h1>
+
+    <div class="box" 
+         style="
+         padding: 20px;">
+        <div style="
+            background-color: #3C99DC;
+            border: 20px solid #2565ae;
+            padding: 20px;">
+            <div style="
+                background-color: #D5F3FE; 
+                border: 20px solid #66d3fa">
+            Simple Box
+            </div>
+        </div>
     </div>
-  </body>
-</html>
+
+    <h1>CSS Display</h1>
+
+    <h2>inline</h2>
+    <div class="playbox">
+        <div style="display: inline; background-color: #0F5298;">inline text1</div>
+        <div style="display: inline; background-color: #2565ae ;">inline text2</div>
+        <div style="display: inline; background-color: #3C99DC;">inline text3</div>
+        <div style="display: inline; background-color: #66d3fa;">inline text4</div>
+        <div style="display: inline; background-color: #D5F3FE">inline text5</div>
+    </div>
+
+    <h2>block</h2>
+    <div class="playbox">
+        <div style="display: block; background-color: #0F5298;">block text1</div>
+        <div style="display: block; background-color: #2565ae;">block text2</div>
+        <div style="display: block; background-color: #3C99DC;">block text3</div>
+        <div style="display: block; background-color: #66d3fa;">block text4</div>
+        <div style="display: block; background-color: #D5F3FE;">block text5</div>
+    </div>
+
+    <h2>inline-block</h2>
+    <div class="playbox">
+        <div style="display: inline-block; ">apple</div>
+        <div style="display: inline-block; ">orange</div>
+        <div style="display: inline-block; ">mango</div>
+        <div style="display: inline-block; ">watermelon</div>
+    </div>
+
+    <h2>none</h2>
+    <div class="playbox">
+        <div style="display: inline-block; ">Yale Blue</div>
+        <div style="display: inline-block; ">Lapis Blue</div>
+        <div style="display: none; ">Tuffs Blue</div>
+        <div style="display: inline-block; ">Maya Blue</div>
+    </div>
+
+    <h2>display:none vs visibility:hidden</h2>
+    <div class="playbox">
+        <div style="display: inline-block; ">Yale Blue</div>
+        <div style="display: inline-block; visibility:hidden;">Lapis Blue</div>
+        <div style="display: none;">Tuffs Blue</div>
+        <div style="display: inline-block; ">Maya Blue</div>
+    </div>
+
+    <h1>CSS Position</h1>
+
+    <h2>Static</h2>
+    <div class="playbox">
+        <div style="
+            position: static;
+            background-color: rgba(60, 153, 220, 0.8);
+            border: 1px solid #3C99DC;
+            width: 0px;
+            padding: 50px;">
+        </div>
+    </div>
+
+    <h2>Absolute</h2>
+    <h3>Fixed width/height</h3>
+    <div class="playbox">
+        <div style="
+            position: absolute;
+            background-color: rgba(60, 153, 220, 0.8);
+            border: 1px solid #3C99DC;
+            width: 100px;
+            height: 100px;">
+        </div>
+    </div>
+    <h3>No width/height</h3>
+    <div class="playbox">
+        <div style="
+            position: absolute;
+            background-color: rgba(60, 153, 220, 0.8);;
+            border: 1px solid #3C99DC;
+            width: 100%;">
+        </div>
+    </div>
+    <h3>Fixed width/height + right/top</h3>
+    <div class="playbox">
+        <div style="
+            position: absolute;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            background-color: red;
+            border: 1px solid darkred;
+            width: 20px;
+            height: 20px;
+            right: 20px;">
+            X
+            </div>
+        <div style="
+        background-color: rgba(60, 153, 220, 0.8);
+        border: 1px solid #3C99DC;
+        padding: 50px;">
+        </div>
+    </div>
+
+    <h3>Backdrop</h3>
+    <div style="
+        position:fixed;
+        padding:0;
+        margin:0;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        background:rgba(0, 0, 0, 0.5);">
+        <div style="
+        color: #fff;
+        font-size: 50px;
+        background-color:  #2565ae;
+        text-align: center;
+        width: 250px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        ">
+        Songkran festival 2023
+        </div>
+    </div>
+    
+    
+</body>
+</html> 
